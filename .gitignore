@@ -1,0 +1,27 @@
+# Sensitive data - do not commit
+data/sms_config.json
+data/users.json
+data/attendance.csv
+data/internal_marks.json
+data/assignment_marks.json
+data/semester_marks.json
+data/holidays.json
+
+# Face images
+admin_faces/
+staff_faces/
+student_faces/
+unknown_faces/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
