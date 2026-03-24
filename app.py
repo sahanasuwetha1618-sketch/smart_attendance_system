@@ -5,7 +5,6 @@ import face_recognition
 import numpy as np
 import pandas as pd
 import plotly.express as px
-import pyttsx3
 import json, os, io, threading, queue
 from datetime import datetime, date, timedelta
 from twilio.rest import Client
@@ -410,11 +409,12 @@ def send_low_attendance_alerts(uname, fn, stats, users):
 def speak(text):
     def _run():
         try:
+            import pyttsx3
             engine = pyttsx3.init()
             engine.say(text)
             engine.runAndWait()
         except Exception:
-            pass
+            pass  # silently skip on cloud (no audio hardware)
     threading.Thread(target=_run, daemon=True).start()
 
 # ─── FACE HELPERS ──────────────────────────────────────────────────────────────
