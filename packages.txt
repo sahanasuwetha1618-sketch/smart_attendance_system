@@ -8,3 +8,6 @@ libboost-python-dev
 libboost-thread-dev
 libgl1-mesa-glx
 libglib2.0-0
+espeak
+espeak-ng
+libespeak-dev

@@ -5,6 +5,7 @@ import face_recognition
 import numpy as np
 import pandas as pd
 import plotly.express as px
+import pyttsx3
 import json, os, io, threading, queue
 from datetime import datetime, date, timedelta
 from twilio.rest import Client
